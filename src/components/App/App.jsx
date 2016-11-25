@@ -20,9 +20,11 @@ class App extends React.Component {
     fetch('/api/questions/')
     .then(data => data.json())
     .then(data => {
+      console.log(data);
       this.setState({
         questions: data.questions
       });
+      console.log(this.state.questions);
     });
   }
 
